@@ -1,0 +1,44 @@
+:root{
+    --road-size: 4em;
+}
+
+.game-area{
+    display: flex;
+    justify-content: center;
+}
+.road{
+    display:flex;
+    align-items: flex-end;
+    width: calc(var(--road-size)* 15);
+    height: 15em;
+    border-bottom:0.5em solid white;
+}
+
+.parameters{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top:3em;
+}
+
+.road > div {
+    display:inline;
+    height: var(--road-size);
+    width: var(--road-size);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.duck {
+    background-image: url(images/duck.png);
+    background-position: center;
+    transition: transform 0.3s;
+}
+
+
+.jumping-duck{
+    transform: translate(0px,-10em);
+}
+
+.plant:not(.duck) {
+    background-image: url(images/plant.png);
+}
