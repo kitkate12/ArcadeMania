@@ -1,0 +1,127 @@
+:root{
+    --bg-color: #3535ec;
+    --text-color: #ffffff;
+    --accent-color: #f70d68;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.responsive {
+    max-width: 60%;
+    height: auto;
+  }
+
+.container {
+    padding:1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-intro{
+    font-family: 'Press Start 2P', cursive;
+    color:var(--text-color);
+    animation: animate 
+                1s linear infinite;
+}
+
+
+.gameName{
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    color: var(--text-color);
+    size: 1em;
+    padding:1em;
+    border: 2px dotted transparent; 
+}
+
+.gameName:hover{
+    size: 1.5em;
+    padding:1em;
+    border: 2px dotted var(--text-color); 
+}
+
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.box{
+    margin-top: 3em;
+    width: 25em;
+    display:inline-block;
+}
+
+
+
+/* DEFINIZIONE STILE AREA DI GIOCO */
+
+.board{
+    font-family: 'Press Start 2P', cursive;
+    color:var(--text-color);
+}
+
+.game-info{
+    padding-bottom: 3em;
+}
+
+p{
+    padding:0% 15% 0% 15%;
+}
+
+h1{
+    padding: 1em;
+}
+
+
+
+/*ALERT MESSAGE FINALE*/
+.game-area{
+    position: relative;
+}
+.gameAlert{
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameAlertMessage{
+    padding: 3em;
+    background-color: var(--text-color);
+    color:var(--accent-color);
+    font-size:2em;
+
+}
+
+#restart{
+    cursor: pointer;
+    margin-top: 3em;
+    padding:2em;
+    border-radius:1em;
+    font-family: 'Press Start 2P', cursive;
+    border:4px dotted var(--text-color);
+    color:var(--text-color);
+    background-color: var(--bg-color);
+}
